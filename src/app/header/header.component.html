@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+      <img (click)="selectedView(0)" src="https://res.cloudinary.com/deptrswzd/image/upload/v1661211194/logo-epa-peque%C3%B1o_wrjg91.png" alt="icon" width="90px">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#homeNavbar" aria-controls="homeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="https://res.cloudinary.com/deptrswzd/image/upload/v1661212563/logo-menu_mi9jqv.png" alt="menu" width="30px">
+      </button>
+      <div class="collapse navbar-collapse" id="homeNavbar">
+        <div class="navbar-nav">
+          <p (click)="selectedView(0)" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#homeNavbar">Características</p>
+          <hr >
+          <p (click)="selectedView(1)" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#homeNavbar">Complementos</p>
+        </div>
+        <div class="container-fluid d-none d-sm-block d-md-block d-lg-block d-xl-block d-xxl-block">
+          <div class="row">
+            <div class="d-flex justify-content-end">
+              <div class="itemMenu" (click)="selectedView(0)">
+                Características
+              </div>
+              <div class="itemMenu" (click)="selectedView(1)">
+                Complementos
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </nav>

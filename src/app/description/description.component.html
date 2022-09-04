@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row justify-content-center m-0 p-0">
+        <h1>{{product?.name}}</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-7">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr class="tableHeader">
+                        <th colspan="2">Características</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2"><img src="{{product?.image?.url}}" alt="piso" width="210px"></th>
+                    </tr>
+                    <tr class="tableHeader">
+                        <th colspan="2">Código: {{product?.code}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Marca</th>
+                        <td>{{product?.brand}}</td>
+                    </tr>
+                    <tr>
+                        <th>País</th>
+                        <td>{{product?.madeIn}}</td>
+                    </tr>
+                    <tr>
+                        <th>Material</th>
+                        <td>{{product?.material}}</td>
+                    </tr>
+                    <tr>
+                        <th>Uso</th>
+                        <td>{{product?.typeOfUse}}</td>
+                    </tr>
+                    <tr>
+                        <th>Metros por caja</th>
+                        <td>{{product?.boxPerformance}}.00m2</td>
+                    </tr>
+                    <tr>
+                        <th>Piezas por caja</th>
+                        <td>{{product?.piecesPerBox}}</td>
+                    </tr>
+                    <tr>
+                        <th>Dimensiones</th>
+                        <td>{{product?.floorDimensions}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

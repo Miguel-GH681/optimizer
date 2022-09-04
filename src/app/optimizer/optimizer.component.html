@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <div class="row justify-content-center m-0 p-0">
+        <div class="col-sm-7">
+            <h1>{{product?.name}}</h1>
+            <div class="d-flex justify-content-center">
+                <img src="{{product?.image?.url}}" alt="piso" width="300px">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center p-0">        
+        <div class="col-sm-7">
+            <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+                <div class="row p-0">
+                    <div class="col-sm-6">
+                        <label for="roomWidth" class="form-label">Ancho</label>
+                        <input type="number" id="roomWidth" class="form-control" required formControlName="roomWidth">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="roomLength" class="form-label">Largo</label>
+                        <input type="number" id="roomLength" class="form-control" required formControlName="roomLength">
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalMaterial">Calcular</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="nota">
+        <div class="alert alert-warning" role="alert">
+            Nota: <br>
+            El cálculo de los poductos es una aproximación, las cantidades pueden variar según la llana que se utilice y según el nivel del piso.
+        </div>
+    </div>        
+</div>
+  
+<div class="modal fade" id="modalMaterial" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Materiales</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr class="tableHeader">
+                    <th colspan="2"></th>
+                </tr>
+                <tr class="imageHeader">
+                    <th colspan="2"><img src="{{product?.image?.url}}" alt="material" width="200px"></th>
+                </tr>
+                <tr class="tableHeader">
+                    <th colspan="2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Metros cuadrados</th>
+                    <td>{{valores?.area}}</td>
+                </tr>
+                <tr>
+                    <th>Pegamento</th>
+                    <td>{{valores?.glue}}</td>
+                </tr>
+                <tr>
+                    <th>Boquicrest</th>
+                    <td>{{valores?.boquicrest}}</td>
+                </tr>
+                <tr>
+                    <th>Piso</th>
+                    <td>{{valores?.boxes}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+    </div>
+    </div>
+</div>
+</div>

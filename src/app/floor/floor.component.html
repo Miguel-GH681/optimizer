@@ -1,0 +1,3 @@
+<app-header (optionView)="changeViews($event)"></app-header>
+<app-description [product]="floor" *ngIf="viewDescription"></app-description>
+<app-optimizer [product]="floor" *ngIf="viewAccesories"></app-optimizer>

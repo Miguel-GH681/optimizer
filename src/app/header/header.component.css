@@ -1,0 +1,27 @@
+hr{
+    margin: 0px;
+}
+
+p{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(37, 150, 190);
+}
+
+.itemMenu{
+    margin: 0px;
+    text-align: center;
+    font-weight: bold;
+    width: 150px;
+    color: rgb(27,64,148);
+}
+
+.itemMenu:hover{
+    cursor: pointer;
+}
+
+nav{
+    background-color: rgb(255,220,0)
+}
