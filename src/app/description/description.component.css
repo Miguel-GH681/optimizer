@@ -8,10 +8,11 @@ h1{
     text-align: center;
 }
 
-tr{
+.tableHeader{
+    background-color: rgba(255,220,0,0.9);
     text-align: center;
 }
 
-.tableHeader{
-    background-color: rgba(255,220,0,0.9);
+.imageHeader{
+    text-align: center;
 }

@@ -11,7 +11,7 @@ export class ProductService {
 
   constructor(private readonly httpClient : HttpClient) { }
 
-  url:string = "http://localhost:3000/v1/datasheet/";
+  url:string = "https://informationpageapi.onrender.com/v1/datasheet/";
 
   httpOptions = {
     headers: new HttpHeaders({
