@@ -18,7 +18,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Ingrese el ancho y largo de su habitación para calcular la cantidad de materiales que necesita para la instalación. Ingrese las cantidades en metros.</td>
+                        <td>Ingrese el ancho y largo de su habitación para calcular la cantidad de materiales que necesita para la instalación del piso. Ingrese las cantidades en <b>metros</b>.</td>
                     </tr>
                 </tbody>
             </table>
@@ -29,7 +29,7 @@
     <div class="row justify-content-center p-0">        
         <div class="col-sm-7">
             <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
-                <div class="row p-0">
+                <div class="row p-0 ms-1 me-1">
                     <div class="col-sm-6">
                         <label for="roomWidth" class="form-label">Ancho</label>
                         <input type="number" id="roomWidth" class="form-control" required formControlName="roomWidth">
@@ -40,15 +40,15 @@
                     </div>
                 </div>
                 <div class="col d-flex justify-content-center">
-                    <button class="btn btn-sm m-3" style="background-color: rgb(255,220,0);" data-bs-toggle="modal" data-bs-target="#modalMaterial">Calcular</button>
+                    <button class="btn m-3" style="background-color: rgb(255,220,0);" data-bs-toggle="modal" data-bs-target="#modalMaterial">Calcular</button>
                 </div>
             </form>
         </div>
     </div>
     <div class="nota">
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-warning m-3" role="alert">
             Nota: <br>
-            El cálculo de los poductos es una aproximación, las cantidades pueden variar según la llana que se utilice y según el nivel del piso.
+            El cálculo de los materiales es una aproximación, las cantidades pueden variar según la llana que se utilice y según el nivel del piso.
         </div>
     </div>        
 </div>
